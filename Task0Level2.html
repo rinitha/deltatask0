@@ -1,0 +1,61 @@
+<html>
+
+<body>
+
+	<div class="sun">
+		<div class="dot">
+		</div>
+	</div>
+
+	<style>
+
+	.dot
+	{
+		width:50px;
+		height:50px;
+		background:blue;
+		border-radius:50%;
+		position:relative;
+		top:0px;
+		left:0px;
+	}
+	
+	.sun
+	{
+		width:200px;
+		height:200px;
+		position: relative;
+		-webkit-animation-name:rectangle;
+		-webkit-animation-timing-function:linear;
+		-webkit-animation-iteration-count:infinite;
+		-webkit-animation-duration:2s;
+		top:100px;
+		left:100px;
+	}
+	@-webkit-keyframes rectangle
+	{
+		from
+		{
+			top:50px;left:50px;
+		}
+		25%
+		{
+			top:50px;left:200px;
+		}
+		50%
+		{
+			top:150px;left:200px;
+		}
+		75%
+		{
+			top:150px;left:50px;
+		}
+		to
+		{
+			top:50px;left:50px;
+		}
+	}
+</style>
+</body>
+
+</html>

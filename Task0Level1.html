@@ -1,0 +1,72 @@
+<html>
+
+<head> 
+<title> Task0Level1 </title>
+
+<body>
+
+	<div class="first"> <h3>The circle will move in a circular path as long as the page is open</h3> </div>
+	
+	<style>
+	.first h3
+	{
+		color:red;
+		background-color:blue;
+	}
+	</style>
+		
+	<script>
+	
+	var circle={
+				center: [100,100],
+				radius: 80,
+				speed: 0.05,// the lesser the value of speed, the faster the element moves
+				size: 10,
+				angle: 0
+			};
+	
+	var init = function()
+	{
+		var d= document.createElement('ForCircularPath');
+		with(d)
+		{
+			setAttribute('id','demo');
+			with(style)
+			{
+				position="absolute";
+				width=circle.size;
+				height=circle.size;
+				borderRadius='50px';
+				background="blue";
+			}
+		}
+		document.body.appendChild(d);
+	};
+	
+	var animate = function() {
+    requestAnimationFrame(animate);
+    var d = document.getElementById('demo');
+    var top = circle.center[1] + circle.radius * Math.sin(circle.angle);
+	var left = circle.center[0] + circle.radius * Math.cos(circle.angle); 
+    d.style.top = top;
+    d.style.left = left;
+    circle.angle+=circle.speed;
+};
+	onload= function()
+	{
+		init();
+		animate();
+	};
+	
+    </script>
+	
+</body>
+
+</html>
+
+		
+		
+		
+				
+	
+			
