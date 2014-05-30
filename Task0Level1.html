@@ -4,7 +4,7 @@
 <title> Task0Level1 </title>
 
 <body>
-
+        <script>
 	var circle={
 				center: [200,200],
 				radius: 100,
@@ -31,15 +31,17 @@
 		document.body.appendChild(d);
 	};
 	
-	var animate = function() {
-    requestAnimationFrame(animate);
-    var d = document.getElementById('demo');
-    var top = circle.center[1] + circle.radius * Math.sin(circle.angle);
-	var left = circle.center[0] + circle.radius * Math.cos(circle.angle); 
-    d.style.top = top;
-    d.style.left = left;
-    circle.angle+=circle.speed;
-};
+	var animate = function() 
+	{
+        	requestAnimationFrame(animate);
+    		var d = document.getElementById('demo');
+    		var top = circle.center[1] + circle.radius * Math.sin(circle.angle);
+		var left = circle.center[0] + circle.radius * Math.cos(circle.angle); 
+    		d.style.top = top;
+    		d.style.left = left;
+    		circle.angle+=circle.speed;
+	};	
+	
 	onload= function()
 	{
 		init();
